@@ -1,0 +1,6 @@
+# action.yml
+name: 'Codespell action'
+description: 'Checks for common misspellings across repository'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
