@@ -1,6 +1,12 @@
-# action.yml
 name: 'Codespell action'
 description: 'Checks for common misspellings across repository'
+author: 'Sanket Sudake'
+inputs:
+  ignoreWordsFile:
+    description: 'File containing words to ignore'
+    default: '.codespell-whitelist'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.ignoreWordsFile }}
